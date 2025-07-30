@@ -1,6 +1,6 @@
 import { Dropdown } from "antd";
-import { GlobalOutlined } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
+import Global from "assets/icons/global.svg";
 
 type Language = {
   key: string;
@@ -39,7 +39,7 @@ export default function LanguageSwitcher() {
       trigger={["click"]}
     >
       <div className="flex items-center cursor-pointer">
-        <GlobalOutlined className="text-lg" />
+        <img src={Global} alt="Language Switcher" className="w-6 h-6" />
       </div>
     </Dropdown>
   );
