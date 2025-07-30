@@ -1,0 +1,8 @@
+- through out this project use antd and its rules spcifed in andt-rules.txt
+- use tailwdincss with it's premitives 
+- don't style antd components  
+- just make littre changes and iterate 
+- don't install anything
+- use types instead of interface
+- allways follow this structure when defining a component : export default function LoginForm({ onSubmit, loading = false }: LoginFormProps)
+- don't use antd typography use just normal html like for title just use h1 or h2 and for text use p  

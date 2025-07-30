@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Roboto", sans-serif !important;
+  @apply bg-bg;
+}
+
+@theme {
+  --color-orange: hsla(21, 100%, 50%, 1);
+  --color-bg: hsla(240, 33%, 98%, 1);
+}
