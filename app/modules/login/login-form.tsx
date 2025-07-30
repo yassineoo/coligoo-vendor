@@ -64,10 +64,7 @@ export default function LoginForm() {
 
           {/* Submit Button */}
           <Form.Item className="mb-0">
-            <Button
-              className="  !bg-orange !text-lg !text-white !border-orange hover:!border-orange"
-              htmlType="submit"
-            >
+            <Button type="primary" htmlType="submit">
               Log in
             </Button>
           </Form.Item>

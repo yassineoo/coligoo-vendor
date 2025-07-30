@@ -6,3 +6,14 @@
 - use types instead of interface
 - allways follow this structure when defining a component : export default function LoginForm({ onSubmit, loading = false }: LoginFormProps)
 - don't use antd typography use just normal html like for title just use h1 or h2 and for text use p  
+- add translation for arabic, and french and english. 
+- for the tranlations it need to be seprate like this one for sidebar: 
+<translation-example>
+  {
+    "side_bar": {
+      "home": "home"
+    }
+  }...
+</translation-example>
+- use antd components please 
+- the tranlsations files are located in the locales and each folder have a file named translation.json file, so don't add any files there 

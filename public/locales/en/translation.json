@@ -1,0 +1,66 @@
+{
+  "side_bar": {
+    "home": "Home",
+    "order_lists": "Order Lists",
+    "product": "Product",
+    "returned": "Returned",
+    "payment": "Payment",
+    "price_applied": "Price applied",
+    "development": "Development",
+    "settings": "Settings",
+    "logout": "Logout"
+  },
+  "top_bar": {
+    "search_placeholder": "Search...",
+    "languages": {
+      "english": "English",
+      "french": "Français",
+      "arabic": "العربية"
+    }
+  },
+  "tab_switcher": {
+    "orders": "Orders",
+    "delivery": "Delivery"
+  },
+  "orders_stats": {
+    "total_orders": "Total orders",
+    "on_hold": "On hold",
+    "sent": "Sent",
+    "delivered": "Delivered",
+    "returned": "Returned"
+  },
+  "orders_charts": {
+    "title": "Orders Overview",
+    "weekly": "Weekly",
+    "monthly": "Monthly",
+    "yearly": "Yearly"
+  },
+  "orders_top": {
+    "top_month": "Top month",
+    "top_year": "Top year",
+    "top_product": "Top Product",
+    "november": "November",
+    "year_2024": "2024",
+    "year_2025": "2025",
+    "total_orders": "89k Total order",
+    "product_name": "X-Watch Pro 5",
+    "total_sale": "Total sale : 2000"
+  },
+  "delivery_stats": {
+    "ongoing_deliveries": "Ongoing Deliveries",
+    "in_preparation": "In Preparation",
+    "dispatched": "Dispatched",
+    "delivered": "Delivered",
+    "canceled": "Canceled"
+  },
+  "statistics_table": {
+    "number": "Number",
+    "wilaya_name": "Wilaya Name",
+    "total": "Total",
+    "delivered": "Delivered",
+    "canceled": "Cancel",
+    "returned": "Returned",
+    "change": "Change",
+    "delivery_rate": "Delivery Rate"
+  }
+}

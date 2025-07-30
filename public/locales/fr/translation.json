@@ -1,0 +1,66 @@
+{
+  "side_bar": {
+    "home": "Accueil",
+    "order_lists": "Listes de commandes",
+    "product": "Produit",
+    "returned": "Retourné",
+    "payment": "Paiement",
+    "price_applied": "Prix appliqué",
+    "development": "Développement",
+    "settings": "Paramètres",
+    "logout": "Déconnexion"
+  },
+  "top_bar": {
+    "search_placeholder": "Rechercher...",
+    "languages": {
+      "english": "English",
+      "french": "Français",
+      "arabic": "العربية"
+    }
+  },
+  "tab_switcher": {
+    "orders": "Commandes",
+    "delivery": "Livraison"
+  },
+  "orders_stats": {
+    "total_orders": "Total des commandes",
+    "on_hold": "En attente",
+    "sent": "Envoyé",
+    "delivered": "Livré",
+    "returned": "Retourné"
+  },
+  "orders_charts": {
+    "title": "Aperçu des commandes",
+    "weekly": "Hebdomadaire",
+    "monthly": "Mensuel",
+    "yearly": "Annuel"
+  },
+  "orders_top": {
+    "top_month": "Meilleur mois",
+    "top_year": "Meilleure année",
+    "top_product": "Meilleur produit",
+    "november": "Novembre",
+    "year_2024": "2024",
+    "year_2025": "2025",
+    "total_orders": "89k commandes au total",
+    "product_name": "X-Watch Pro 5",
+    "total_sale": "Vente totale : 2000"
+  },
+  "delivery_stats": {
+    "ongoing_deliveries": "Livraisons en cours",
+    "in_preparation": "En préparation",
+    "dispatched": "Expédié",
+    "delivered": "Livré",
+    "canceled": "Annulé"
+  },
+  "statistics_table": {
+    "number": "Numéro",
+    "wilaya_name": "Nom de Wilaya",
+    "total": "Total",
+    "delivered": "Livré",
+    "canceled": "Annulé",
+    "returned": "Retourné",
+    "change": "Changement",
+    "delivery_rate": "Taux de livraison"
+  }
+}

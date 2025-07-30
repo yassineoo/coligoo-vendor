@@ -1,0 +1,66 @@
+{
+  "side_bar": {
+    "home": "الرئيسية",
+    "order_lists": "قوائم الطلبات",
+    "product": "المنتج",
+    "returned": "المرتجع",
+    "payment": "الدفع",
+    "price_applied": "السعر المطبق",
+    "development": "التطوير",
+    "settings": "الإعدادات",
+    "logout": "تسجيل الخروج"
+  },
+  "top_bar": {
+    "search_placeholder": "بحث...",
+    "languages": {
+      "english": "English",
+      "french": "Français",
+      "arabic": "العربية"
+    }
+  },
+  "tab_switcher": {
+    "orders": "الطلبات",
+    "delivery": "التوصيل"
+  },
+  "orders_stats": {
+    "total_orders": "إجمالي الطلبات",
+    "on_hold": "قيد الانتظار",
+    "sent": "مُرسل",
+    "delivered": "تم التسليم",
+    "returned": "مُرتجع"
+  },
+  "orders_charts": {
+    "title": "نظرة عامة على الطلبات",
+    "weekly": "أسبوعي",
+    "monthly": "شهري",
+    "yearly": "سنوي"
+  },
+  "orders_top": {
+    "top_month": "أفضل شهر",
+    "top_year": "أفضل سنة",
+    "top_product": "أفضل منتج",
+    "november": "نوفمبر",
+    "year_2024": "2024",
+    "year_2025": "2025",
+    "total_orders": "89 ألف طلب إجمالي",
+    "product_name": "ساعة إكس برو 5",
+    "total_sale": "إجمالي المبيعات : 2000"
+  },
+  "delivery_stats": {
+    "ongoing_deliveries": "التوصيلات الجارية",
+    "in_preparation": "قيد التحضير",
+    "dispatched": "تم الإرسال",
+    "delivered": "تم التسليم",
+    "canceled": "ملغي"
+  },
+  "statistics_table": {
+    "number": "الرقم",
+    "wilaya_name": "اسم الولاية",
+    "total": "المجموع",
+    "delivered": "تم التسليم",
+    "canceled": "ملغي",
+    "returned": "مُرتجع",
+    "change": "التغيير",
+    "delivery_rate": "معدل التسليم"
+  }
+}
