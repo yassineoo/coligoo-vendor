@@ -1,5 +1,5 @@
 import HomeScreen from "~/modules/home/home-screen";
 
-export default function Dashboard() {
+export default function Home() {
   return <HomeScreen />;
 }

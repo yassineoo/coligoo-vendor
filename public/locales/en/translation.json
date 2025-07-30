@@ -62,5 +62,76 @@
     "returned": "Returned",
     "change": "Change",
     "delivery_rate": "Delivery Rate"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "all": "All",
+    "unread": "Unread",
+    "mark_all_read": "Mark all as read"
+  },
+  "order_lists": {
+    "header": "You have no order yet",
+    "edit": "Edit",
+    "add_order": "Add order",
+    "export": "Export",
+    "filters": "Filters",
+    "delete": "Delete",
+    "table": {
+      "date": "Date",
+      "tracking": "Tracking",
+      "client": "Client",
+      "contact": "Contact",
+      "wilaya": "Wilaya",
+      "address": "Address",
+      "order": "Order",
+      "total_price": "Total price",
+      "delivery": "Delivery",
+      "procedure": "Procedure",
+      "condition": "Condition",
+      "change": "Change"
+    },
+    "status": {
+      "delivered": "Delivered",
+      "in_preparation": "In Preparation",
+      "cancelled": "Cancelled"
+    },
+    "empty_state": {
+      "title": "No orders found",
+      "description": "There are no orders to display at the moment."
+    }
+  },
+  "add_order": {
+    "customer_information": "Customer information",
+    "validation": "Validation",
+    "first_name": "First name",
+    "last_name": "Last name",
+    "phone_number_01": "Phone number 01",
+    "phone_number_02": "Phone number 02",
+    "wilaya": "Wilaya",
+    "commune": "Commune",
+    "full_address": "Full Address",
+    "product": "Product",
+    "note": "Note",
+    "note_placeholder": "Add any additional notes...",
+    "order_type": "Order type",
+    "domicile": "Domicile",
+    "stopdesk": "stopdesk",
+    "normal": "normal",
+    "exchange": "Exchange",
+    "return_fees": "Return Fees",
+    "delivery_costs": "Delivery Costs",
+    "subtotal": "Subtotal",
+    "total_to_collect": "Total to collect",
+    "cancel": "Cancel",
+    "validate": "validate",
+    "validation_rules": {
+      "first_name_required": "First name is required",
+      "last_name_required": "Last name is required",
+      "phone_required": "Phone number is required",
+      "wilaya_required": "Wilaya is required",
+      "commune_required": "Commune is required",
+      "address_required": "Address is required",
+      "product_required": "Product is required"
+    }
   }
 }

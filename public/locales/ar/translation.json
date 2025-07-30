@@ -62,5 +62,45 @@
     "returned": "مُرتجع",
     "change": "التغيير",
     "delivery_rate": "معدل التسليم"
+  },
+  "notifications": {
+    "title": "الإشعارات",
+    "all": "الكل",
+    "unread": "غير مقروءة",
+    "mark_all_read": "تحديد الكل كمقروء"
+  },
+  "order_lists": {
+    "header": "ليس لديك أي طلب بعد",
+    "edit": "تعديل",
+    "add_order": "إضافة طلب",
+    "export": "تصدير",
+    "filters": "المرشحات",
+    "delete": "حذف",
+    "table": {
+      "date": "التاريخ",
+      "tracking": "التتبع",
+      "client": "العميل",
+      "contact": "جهة الاتصال",
+      "wilaya": "الولاية",
+      "address": "العنوان",
+      "order": "الطلب",
+      "total_price": "السعر الإجمالي",
+      "delivery": "التوصيل",
+      "procedure": "الإجراء",
+      "condition": "الحالة",
+      "change": "تغيير"
+    },
+    "status": {
+      "delivered": "تم التسليم",
+      "in_preparation": "قيد التحضير",
+      "cancelled": "ملغي"
+    },
+    "empty_state": {
+      "title": "لم يتم العثور على طلبات",
+      "description": "لا توجد طلبات لعرضها في الوقت الحالي."
+    }
+  },
+  "action_button": {
+    "add_order": "إضافة طلب"
   }
 }

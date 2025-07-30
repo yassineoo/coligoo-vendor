@@ -62,5 +62,45 @@
     "returned": "Retourné",
     "change": "Changement",
     "delivery_rate": "Taux de livraison"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "all": "Toutes",
+    "unread": "Non lues",
+    "mark_all_read": "Marquer toutes comme lues"
+  },
+  "order_lists": {
+    "header": "Vous n'avez encore aucune commande",
+    "edit": "Modifier",
+    "add_order": "Ajouter une commande",
+    "export": "Exporter",
+    "filters": "Filtres",
+    "delete": "Supprimer",
+    "table": {
+      "date": "Date",
+      "tracking": "Suivi",
+      "client": "Client",
+      "contact": "Contact",
+      "wilaya": "Wilaya",
+      "address": "Adresse",
+      "order": "Commande",
+      "total_price": "Prix total",
+      "delivery": "Livraison",
+      "procedure": "Procédure",
+      "condition": "Condition",
+      "change": "Changement"
+    },
+    "status": {
+      "delivered": "Livré",
+      "in_preparation": "En préparation",
+      "cancelled": "Annulé"
+    },
+    "empty_state": {
+      "title": "Aucune commande trouvée",
+      "description": "Il n'y a aucune commande à afficher pour le moment."
+    }
+  },
+  "action_button": {
+    "add_order": "Ajouter une commande"
   }
 }
