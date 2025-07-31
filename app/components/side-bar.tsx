@@ -10,6 +10,7 @@ import Returned from "assets/icons/returned.svg?react";
 import PriceApplied from "assets/icons/price-applied.svg?react";
 import Development from "assets/icons/dev.svg?react";
 import Settings from "assets/icons/setting.svg?react";
+import Payment from "assets/icons/payment.svg?react";
 
 import clsx from "clsx";
 
@@ -42,6 +43,11 @@ export default function SideBar() {
       key: "returned",
       href: "dashboard/returned",
       icon: Returned,
+    },
+    {
+      key: "payment",
+      href: "dashboard/payment",
+      icon: Payment,
     },
     {
       key: "price-applied",

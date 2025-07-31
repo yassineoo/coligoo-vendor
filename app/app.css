@@ -20,3 +20,10 @@ h2 {
 .isActive {
   @apply bg-orange text-white before:content-[''] before:block before:absolute before:left-0 before:h-full before:w-1 before:bg-orange-500 before:-translate-x-4 before:rounded-tr-lg before:rounded-br-lg before:-translate-y-3 rtl:before:right-0 rtl:before:translate-x-4 rtl:before:rotate-180;
 }
+.active_tab {
+  @apply text-orange transition-colors relative after:rounded-tl-2xl after:rounded-tr-2xl after:content-[''] after:w-full after:h-1.5 after:bg-orange after:absolute after:bottom-0 after:left-0;
+}
+
+button {
+  @apply cursor-pointer;
+}
