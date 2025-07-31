@@ -68,7 +68,7 @@ export default function LoginForm() {
 
           {/* Forgot Password Link */}
           <div className="text-right mb-6">
-            <Link to={"/forget-password"} className="text-sm !text-gray-500">
+            <Link to={"/reset-password"} className="text-sm !text-gray-500">
               Forget Password?
             </Link>
           </div>

@@ -16,3 +16,7 @@ h1 {
 h2 {
   @apply text-2xl font-bold text-gray-800 mb-4;
 }
+
+.isActive {
+  @apply bg-orange text-white before:content-[''] before:block before:absolute before:left-0 before:h-full before:w-1 before:bg-orange-500 before:-translate-x-4 before:rounded-tr-lg before:rounded-br-lg before:-translate-y-3 rtl:before:right-0 rtl:before:translate-x-4 rtl:before:rotate-180;
+}

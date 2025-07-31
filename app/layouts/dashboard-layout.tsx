@@ -5,10 +5,10 @@ import TopBar from "~/components/top-bar";
 export default function DashboardLayout() {
   return (
     <div className="flex  ">
-      <div className="basis-[20%] sticky top-0 bg-white h-screen">
+      <div className="basis-[17%] sticky top-0 bg-white h-screen">
         <SideBar />
       </div>
-      <div className=" basis-[80%] relative overflow-x-hidden   ">
+      <div className=" basis-[83%] relative overflow-x-hidden   ">
         <div className=" sticky top-0 bg-white     z-10">
           <TopBar />
         </div>
