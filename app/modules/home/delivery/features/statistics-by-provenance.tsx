@@ -161,7 +161,6 @@ export default function StatisticsByProvenance() {
       <Table
         columns={columns}
         dataSource={data}
-        pagination={false}
         className="[&_.ant-table-thead_.ant-table-cell]:bg-purple-50 [&_.ant-table-thead_.ant-table-cell]:font-normal [&_.ant-table-thead_.ant-table-cell]:text-center"
         size="middle"
       />

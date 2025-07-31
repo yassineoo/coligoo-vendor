@@ -100,7 +100,93 @@
       "description": "لا توجد طلبات لعرضها في الوقت الحالي."
     }
   },
-  "action_button": {
-    "add_order": "إضافة طلب"
+  "products_table": {
+    "table": {
+      "product_name": "اسم المنتج",
+      "product_alias": "اسم مستعار للمنتج",
+      "options": "الخيارات",
+      "cost_range": "نطاق السعر",
+      "category": "الفئة",
+      "in_stock": "في المخزون",
+      "actions": "الإجراءات"
+    },
+    "empty_state": {
+      "title": "لم يتم العثور على منتجات",
+      "description": "لا توجد منتجات لعرضها في الوقت الحالي."
+    },
+    "add_product": "إضافة منتج"
+  },
+  "returned_table": {
+    "table": {
+      "date": "التاريخ",
+      "tracking": "التتبع",
+      "client": "العميل",
+      "contact": "الاتصال",
+      "wilaya": "الولاية",
+      "address": "العنوان",
+      "order": "الطلب",
+      "total_price": "السعر الإجمالي",
+      "delivery": "التسليم",
+      "condition": "الحالة"
+    },
+    "status": {
+      "returned_to_hub": "تم إرجاعه إلى المركز",
+      "returned_to_sender": "تم إرجاعه إلى المرسل",
+      "refunded": "تم استرداد المبلغ"
+    },
+    "empty_state": {
+      "title": "لم يتم العثور على عناصر مرتجعة",
+      "description": "لا توجد عناصر مرتجعة لعرضها في الوقت الحالي."
+    }
+  },
+  "ready_balance_insights": {
+    "total_income": "إجمالي الإيرادات",
+    "ready_amount": "المبلغ الجاهز",
+    "total_costs": "إجمالي التكاليف",
+    "delivered": "تم التسليم",
+    "canceled": "ملغي"
+  },
+  "ready_balance_table": {
+    "ref": "المرجع",
+    "total": "الإجمالي",
+    "delivery_fee": "رسوم التوصيل",
+    "cancel_fee": "رسوم الإلغاء",
+    "packaging_fee": "رسوم التغليف",
+    "weight_fee": "رسوم الوزن"
+  },
+  "not_ready_balance_insights": {
+    "total_income": "إجمالي الإيرادات",
+    "not_ready_amount": "غير جاهز",
+    "total_costs": "إجمالي التكاليف",
+    "delivered": "تم التسليم",
+    "canceled": "ملغي"
+  },
+  "not_ready_balance_table": {
+    "ref": "المرجع",
+    "total": "الإجمالي",
+    "delivery_fee": "رسوم التوصيل",
+    "cancel_fee": "رسوم الإلغاء",
+    "packaging_fee": "رسوم التغليف",
+    "weight_fee": "رسوم الوزن"
+  },
+  "my_payment_table": {
+    "ref": "المرجع",
+    "total": "الإجمالي",
+    "delivery_fee": "رسوم التوصيل",
+    "cancel_fee": "رسوم الإلغاء",
+    "packaging_fee": "رسوم التغليف",
+    "weight_fee": "رسوم الوزن"
+  },
+  "price_applied_table": {
+    "number": "الرقم",
+    "wilaya": "اسم الولاية",
+    "home_delivery": "توصيل منزلي",
+    "stopdesk": "مكتب الاستلام",
+    "returned": "مرتجع"
+  },
+  "price_applied_insights": {
+    "call_center": "مركز الاتصال",
+    "packaging": "التغليف",
+    "weight": "الوزن (كغ)"
   }
 }

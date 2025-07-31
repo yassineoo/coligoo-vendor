@@ -10,7 +10,9 @@ body {
   --color-bg: hsla(240, 33%, 98%, 1);
   --color-gray: hsla(0, 0%, 95%, 1);
 }
-
+h1 {
+  @apply capitalize text-3xl font-bold text-gray-800 mb-4;
+}
 h2 {
   @apply text-2xl font-bold text-gray-800 mb-4;
 }

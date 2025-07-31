@@ -1,5 +1,5 @@
 import ReturnLink from "~/components/return-link";
-import AddUpdateOrdersForm from "./features/add-update-orders-form";
+import AddUpdateOrdersForm from "./add-update-orders-form";
 
 export default function AddUpdateOrdersScreen() {
   return (

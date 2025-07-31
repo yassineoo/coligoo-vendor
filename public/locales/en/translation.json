@@ -100,6 +100,95 @@
       "description": "There are no orders to display at the moment."
     }
   },
+  "products_table": {
+    "table": {
+      "product_name": "Product Name",
+      "product_alias": "Product Alias",
+      "options": "Options",
+      "cost_range": "Cost Range",
+      "category": "Category",
+      "in_stock": "In Stock",
+      "actions": "Actions"
+    },
+    "empty_state": {
+      "title": "No products found",
+      "description": "There are no products to display at the moment."
+    },
+    "add_product": "Add Product"
+  },
+  "returned_table": {
+    "table": {
+      "date": "Date",
+      "tracking": "Tracking",
+      "client": "Client",
+      "contact": "Contact",
+      "wilaya": "Wilaya",
+      "address": "Address",
+      "order": "Order",
+      "total_price": "Total price",
+      "delivery": "Delivery",
+      "condition": "Condition"
+    },
+    "status": {
+      "returned_to_hub": "Returned to hub",
+      "returned_to_sender": "Returned to sender",
+      "refunded": "Refunded"
+    },
+    "empty_state": {
+      "title": "No returned items found",
+      "description": "There are no returned items to display at the moment."
+    }
+  },
+  "ready_balance_insights": {
+    "total_income": "Total income",
+    "ready_amount": "Ready amount",
+    "total_costs": "Total costs",
+    "delivered": "Delivered",
+    "canceled": "Canceled"
+  },
+  "ready_balance_table": {
+    "ref": "Ref",
+    "total": "Total",
+    "delivery_fee": "Delivery Fee",
+    "cancel_fee": "Cancel Fee",
+    "packaging_fee": "Packaging Fee",
+    "weight_fee": "Weight Fee"
+  },
+  "not_ready_balance_insights": {
+    "total_income": "Total income",
+    "not_ready_amount": "Not ready",
+    "total_costs": "Total costs",
+    "delivered": "Delivered",
+    "canceled": "Canceled"
+  },
+  "not_ready_balance_table": {
+    "ref": "Ref",
+    "total": "Total",
+    "delivery_fee": "Delivery Fee",
+    "cancel_fee": "Cancel Fee",
+    "packaging_fee": "Packaging Fee",
+    "weight_fee": "Weight Fee"
+  },
+  "my_payment_table": {
+    "ref": "Ref",
+    "total": "Total",
+    "delivery_fee": "Delivery Fee",
+    "cancel_fee": "Cancel Fee",
+    "packaging_fee": "Packaging Fee",
+    "weight_fee": "Weight Fee"
+  },
+  "price_applied_table": {
+    "number": "Number",
+    "wilaya": "Wilaya name",
+    "home_delivery": "Home Delivery",
+    "stopdesk": "stopdesk",
+    "returned": "Returned"
+  },
+  "price_applied_insights": {
+    "call_center": "Call Center",
+    "packaging": "Packaging",
+    "weight": "Weight (kg)"
+  },
   "add_order": {
     "customer_information": "Customer information",
     "validation": "Validation",

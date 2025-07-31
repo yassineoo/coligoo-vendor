@@ -36,9 +36,9 @@ export default function SideBar() {
       ),
     },
     {
-      key: "dashboard/product",
+      key: "dashboard/products",
       icon: <ShoppingOutlined />,
-      label: <Link to="/dashboard/product">{t("side_bar.product")}</Link>,
+      label: <Link to="/dashboard/products">{t("side_bar.product")}</Link>,
     },
     {
       key: "dashboard/returned",

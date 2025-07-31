@@ -100,7 +100,93 @@
       "description": "Il n'y a aucune commande à afficher pour le moment."
     }
   },
-  "action_button": {
-    "add_order": "Ajouter une commande"
+  "products_table": {
+    "table": {
+      "product_name": "Nom du produit",
+      "product_alias": "Alias du produit",
+      "options": "Options",
+      "cost_range": "Gamme de prix",
+      "category": "Catégorie",
+      "in_stock": "En stock",
+      "actions": "Actions"
+    },
+    "empty_state": {
+      "title": "Aucun produit trouvé",
+      "description": "Il n'y a aucun produit à afficher pour le moment."
+    },
+    "add_product": "Ajouter un produit"
+  },
+  "returned_table": {
+    "table": {
+      "date": "Date",
+      "tracking": "Suivi",
+      "client": "Client",
+      "contact": "Contact",
+      "wilaya": "Wilaya",
+      "address": "Adresse",
+      "order": "Commande",
+      "total_price": "Prix total",
+      "delivery": "Livraison",
+      "condition": "Condition"
+    },
+    "status": {
+      "returned_to_hub": "Retourné au hub",
+      "returned_to_sender": "Retourné à l'expéditeur",
+      "refunded": "Remboursé"
+    },
+    "empty_state": {
+      "title": "Aucun article retourné trouvé",
+      "description": "Il n'y a aucun article retourné à afficher pour le moment."
+    }
+  },
+  "ready_balance_insights": {
+    "total_income": "Revenu total",
+    "ready_amount": "Montant prêt",
+    "total_costs": "Coûts totaux",
+    "delivered": "Livré",
+    "canceled": "Annulé"
+  },
+  "ready_balance_table": {
+    "ref": "Réf",
+    "total": "Total",
+    "delivery_fee": "Frais de livraison",
+    "cancel_fee": "Frais d'annulation",
+    "packaging_fee": "Frais d'emballage",
+    "weight_fee": "Frais de poids"
+  },
+  "not_ready_balance_insights": {
+    "total_income": "Revenu total",
+    "not_ready_amount": "Non prêt",
+    "total_costs": "Coûts totaux",
+    "delivered": "Livré",
+    "canceled": "Annulé"
+  },
+  "not_ready_balance_table": {
+    "ref": "Réf",
+    "total": "Total",
+    "delivery_fee": "Frais de livraison",
+    "cancel_fee": "Frais d'annulation",
+    "packaging_fee": "Frais d'emballage",
+    "weight_fee": "Frais de poids"
+  },
+  "my_payment_table": {
+    "ref": "Réf",
+    "total": "Total",
+    "delivery_fee": "Frais de livraison",
+    "cancel_fee": "Frais d'annulation",
+    "packaging_fee": "Frais d'emballage",
+    "weight_fee": "Frais de poids"
+  },
+  "price_applied_table": {
+    "number": "Numéro",
+    "wilaya": "Nom de Wilaya",
+    "home_delivery": "Livraison à domicile",
+    "stopdesk": "stopdesk",
+    "returned": "Retourné"
+  },
+  "price_applied_insights": {
+    "call_center": "Centre d'appel",
+    "packaging": "Emballage",
+    "weight": "Poids (kg)"
   }
 }

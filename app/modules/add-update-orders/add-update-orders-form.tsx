@@ -1,5 +1,5 @@
 import { Button, Form, Input, Radio, Select, type FormProps } from "antd";
-import type { AddUpdateOrderFormType } from "../add-update-orders-schema";
+import type { AddUpdateOrderFormType } from "./add-update-orders-schema";
 import Label from "~/components/label";
 
 const { Option } = Select;
@@ -10,6 +10,7 @@ export default function AddUpdateOrdersForm({
 }: {
   initialValues?: AddUpdateOrderFormType;
 }) {
+  const [form] = Form.useForm<AddUpdateOrderFormType>();
   const onFinish: FormProps<AddUpdateOrderFormType>["onFinish"] = (values) => {
     console.log("Success:", values);
   };
@@ -30,6 +31,7 @@ export default function AddUpdateOrdersForm({
         layout="vertical"
         size="large"
         className="space-y-4"
+        form={form}
       >
         <div className="flex gap-4">
           <Form.Item<AddUpdateOrderFormType>

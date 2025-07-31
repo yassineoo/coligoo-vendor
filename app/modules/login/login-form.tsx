@@ -1,13 +1,23 @@
-import { Form, Input, Button } from "antd";
+import { Form, Input, Button, notification } from "antd";
 import mainLogo from "assets/main-logo.svg";
 import { loginFormRules, type LoginFormData } from "./login-schema";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import Label from "~/components/label";
 
 export default function LoginForm() {
   const [form] = Form.useForm();
 
-  const handleSubmit = (values: LoginFormData) => {};
+  const navigate = useNavigate();
+
+  const handleSubmit = (values: LoginFormData) => {
+    // Handle login logic here
+    // On success, navigate to the dashboard or another page
+    notification.success({
+      message: "Login Successful",
+      description: "You have successfully logged in.",
+    });
+    navigate("/dashboard/home");
+  };
 
   return (
     <div className="flex flex-col items-center justify-center h-full max-w-sm mx-auto">
@@ -36,6 +46,7 @@ export default function LoginForm() {
           onFinish={handleSubmit}
           size="large"
           className="w-full"
+          requiredMark={false}
         >
           {/* Email Field */}
           <Form.Item
