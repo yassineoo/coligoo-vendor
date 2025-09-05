@@ -3,20 +3,43 @@ import mainLogo from "assets/main-logo.svg";
 import { loginFormRules, type LoginFormData } from "./login-schema";
 import { Link, useNavigate } from "react-router";
 import Label from "~/components/label";
+import { useMutation } from "@tanstack/react-query";
+import { loginVendor } from "./api/login-vendor";
+import { saveToken } from "~/utils/manage-token";
+import { useAppDispatch } from "~/redux/hooks";
+import { setUser } from "../sign-up/redux/user-slice";
 
 export default function LoginForm() {
   const [form] = Form.useForm();
 
   const navigate = useNavigate();
+  const dispatch = useAppDispatch();
+
+  const mutation = useMutation({
+    mutationFn: loginVendor,
+    onSuccess: (data) => {
+      // Invalidate and refetch
+      console.log("Response Data:", data);
+      saveToken(data?.data?.token);
+      dispatch(setUser(data?.data?.userInfo));
+      notification.success({
+        message: "Success",
+        description: data?.data?.msg || "Login successful!",
+      });
+      navigate("/dashboard/home", { replace: true });
+    },
+    onError: (error: any) => {
+      console.error("Error Details:", error);
+      notification.error({
+        message: "Error",
+        description:
+          error?.response?.data?.fr || "Something went wrong. Try again.",
+      });
+    },
+  });
 
   const handleSubmit = (values: LoginFormData) => {
-    // Handle login logic here
-    // On success, navigate to the dashboard or another page
-    notification.success({
-      message: "Login Successful",
-      description: "You have successfully logged in.",
-    });
-    navigate("/dashboard/home");
+    mutation.mutate(values);
   };
 
   return (
@@ -75,8 +98,13 @@ export default function LoginForm() {
 
           {/* Submit Button */}
           <Form.Item className="mb-0">
-            <Button type="primary" htmlType="submit">
-              Log in
+            <Button
+              loading={mutation.isPending}
+              disabled={mutation.isPending}
+              type="primary"
+              htmlType="submit"
+            >
+              {mutation.isPending ? "Logging in..." : "Login"}
             </Button>
           </Form.Item>
         </Form>

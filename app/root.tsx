@@ -13,7 +13,7 @@ import "@ant-design/v5-patch-for-react-19";
 
 import type { Route } from "./+types/root";
 import "./app.css";
-import { ConfigProvider, App as AntdApp } from "antd";
+import { ConfigProvider } from "antd";
 import { Provider } from "react-redux";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";

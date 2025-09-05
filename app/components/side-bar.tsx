@@ -2,7 +2,7 @@ import { Button } from "antd";
 import { LogoutOutlined } from "@ant-design/icons";
 import logoText from "assets/logo-text.svg";
 import { useTranslation } from "react-i18next";
-import { Link, useLocation } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import Home from "assets/icons/home.svg?react";
 import Orders from "assets/icons/orders.svg?react";
 import Products from "assets/icons/product.svg?react";
@@ -11,18 +11,29 @@ import PriceApplied from "assets/icons/price-applied.svg?react";
 import Development from "assets/icons/dev.svg?react";
 import Settings from "assets/icons/setting.svg?react";
 import Payment from "assets/icons/payment.svg?react";
-import logout from "assets/icons/logout.svg?react";
+import Logout from "assets/icons/logout.svg?react";
 
 import clsx from "clsx";
+import { removeToken } from "~/utils/manage-token";
+import { useAppDispatch } from "~/redux/hooks";
+import { clearUser } from "~/modules/sign-up/redux/user-slice";
 
 export default function SideBar() {
   const { t } = useTranslation();
 
   const { pathname } = useLocation();
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
   const isActiveRoute = (href: string) => {
     return pathname.includes(href);
   };
+
+  function handleLogout() {
+    removeToken();
+    dispatch(clearUser());
+    navigate("/");
+  }
 
   const navItems = [
     {
@@ -76,7 +87,6 @@ export default function SideBar() {
         <div className=" flex-1 px-4 ">
           <nav className="space-y-2">
             {navItems.map((item) => {
-              const Icon = item.icon;
               const isActive = isActiveRoute(item.href);
               return (
                 <Link
@@ -107,11 +117,13 @@ export default function SideBar() {
       </div>
       {/* logout button */}
       <Button
-        icon={<LogoutOutlined />}
         className=" !pl-7 !text-orange !justify-start"
         type="link"
         size="large"
+        onClick={handleLogout}
+        htmlType="button"
       >
+        <Logout className=" w-6 h-6 mr-2 " />
         {t("side_bar.logout")}
       </Button>
     </div>

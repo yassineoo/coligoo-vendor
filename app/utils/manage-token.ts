@@ -8,3 +8,7 @@ export function getToken() {
   if (match) return match[2];
   return null;
 }
+
+export function removeToken() {
+  document.cookie = "vendor-token=; path=/; max-age=0";
+}
