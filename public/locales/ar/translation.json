@@ -100,21 +100,22 @@
       "description": "لا توجد طلبات لعرضها في الوقت الحالي."
     }
   },
-  "products_table": {
+  "products": {
+    "title": "جدول المنتجات",
     "table": {
       "product_name": "اسم المنتج",
       "product_alias": "اسم مستعار للمنتج",
-      "options": "الخيارات",
-      "cost_range": "نطاق السعر",
+      "variables": "المتغيرات",
       "category": "الفئة",
-      "in_stock": "في المخزون",
+      "quantity": "الكمية",
       "actions": "الإجراءات"
     },
-    "empty_state": {
-      "title": "لم يتم العثور على منتجات",
-      "description": "لا توجد منتجات لعرضها في الوقت الحالي."
-    },
-    "add_product": "إضافة منتج"
+
+    "add_product": "إضافة منتج",
+    "actions": {
+      "edit": "تعديل",
+      "delete": "حذف"
+    }
   },
   "returned_table": {
     "table": {
@@ -188,5 +189,39 @@
     "call_center": "مركز الاتصال",
     "packaging": "التغليف",
     "weight": "الوزن (كغ)"
+  },
+  "add_order": {
+    "customer_information": "معلومات العميل",
+    "validation": "التحقق",
+    "first_name": "الاسم الأول",
+    "last_name": "اسم العائلة",
+    "phone_number_01": "رقم الهاتف 01",
+    "phone_number_02": "رقم الهاتف 02",
+    "wilaya": "الولاية",
+    "commune": "البلدية",
+    "full_address": "العنوان الكامل",
+    "product": "المنتج",
+    "note": "ملاحظة",
+    "note_placeholder": "أضف أي ملاحظات إضافية...",
+    "order_type": "نوع الطلب",
+    "domicile": "منزلي",
+    "stopdesk": "مكتب الاستلام",
+    "normal": "عادي",
+    "exchange": "تبديل",
+    "return_fees": "رسوم الإرجاع",
+    "delivery_costs": "تكاليف التوصيل",
+    "subtotal": "المجموع الفرعي",
+    "total_to_collect": "المجموع للتحصيل",
+    "cancel": "إلغاء",
+    "validate": "تأكيد",
+    "validation_rules": {
+      "first_name_required": "الاسم الأول مطلوب",
+      "last_name_required": "اسم العائلة مطلوب",
+      "phone_required": "رقم الهاتف مطلوب",
+      "wilaya_required": "الولاية مطلوبة",
+      "commune_required": "البلدية مطلوبة",
+      "address_required": "العنوان مطلوب",
+      "product_required": "المنتج مطلوب"
+    }
   }
 }

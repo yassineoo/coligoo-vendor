@@ -100,21 +100,22 @@
       "description": "Il n'y a aucune commande à afficher pour le moment."
     }
   },
-  "products_table": {
+  "products": {
+    "title": "Tableau des produits",
     "table": {
       "product_name": "Nom du produit",
       "product_alias": "Alias du produit",
-      "options": "Options",
-      "cost_range": "Gamme de prix",
+      "variables": "Variables",
       "category": "Catégorie",
-      "in_stock": "En stock",
+      "quantity": "Quantité",
       "actions": "Actions"
     },
-    "empty_state": {
-      "title": "Aucun produit trouvé",
-      "description": "Il n'y a aucun produit à afficher pour le moment."
-    },
-    "add_product": "Ajouter un produit"
+
+    "add_product": "Ajouter un produit",
+    "actions": {
+      "edit": "Modifier",
+      "delete": "Supprimer"
+    }
   },
   "returned_table": {
     "table": {
@@ -188,5 +189,39 @@
     "call_center": "Centre d'appel",
     "packaging": "Emballage",
     "weight": "Poids (kg)"
+  },
+  "add_order": {
+    "customer_information": "Informations client",
+    "validation": "Validation",
+    "first_name": "Prénom",
+    "last_name": "Nom de famille",
+    "phone_number_01": "Numéro de téléphone 01",
+    "phone_number_02": "Numéro de téléphone 02",
+    "wilaya": "Wilaya",
+    "commune": "Commune",
+    "full_address": "Adresse complète",
+    "product": "Produit",
+    "note": "Note",
+    "note_placeholder": "Ajoutez des notes supplémentaires...",
+    "order_type": "Type de commande",
+    "domicile": "Domicile",
+    "stopdesk": "stopdesk",
+    "normal": "normal",
+    "exchange": "Échange",
+    "return_fees": "Frais de retour",
+    "delivery_costs": "Coûts de livraison",
+    "subtotal": "Sous-total",
+    "total_to_collect": "Total à collecter",
+    "cancel": "Annuler",
+    "validate": "valider",
+    "validation_rules": {
+      "first_name_required": "Le prénom est requis",
+      "last_name_required": "Le nom de famille est requis",
+      "phone_required": "Le numéro de téléphone est requis",
+      "wilaya_required": "La wilaya est requise",
+      "commune_required": "La commune est requise",
+      "address_required": "L'adresse est requise",
+      "product_required": "Le produit est requis"
+    }
   }
 }

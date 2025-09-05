@@ -1,5 +1,4 @@
 import { Button } from "antd";
-import { LogoutOutlined } from "@ant-design/icons";
 import logoText from "assets/logo-text.svg";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation, useNavigate } from "react-router";
@@ -42,12 +41,12 @@ export default function SideBar() {
       icon: Home,
     },
     {
-      key: "order-lists",
+      key: "order_lists",
       href: "dashboard/order-lists",
       icon: Orders,
     },
     {
-      key: "products",
+      key: "product",
       href: "dashboard/products",
       icon: Products,
     },
@@ -62,7 +61,7 @@ export default function SideBar() {
       icon: Payment,
     },
     {
-      key: "price-applied",
+      key: "price_applied",
       href: "dashboard/price-applied",
       icon: PriceApplied,
     },
@@ -108,7 +107,9 @@ export default function SideBar() {
                       })}
                     />
                   </div>
-                  <span className="capitalize">{t(item.key)}</span>
+                  <span className="capitalize">
+                    {t(`side_bar.${item.key}`)}
+                  </span>
                 </Link>
               );
             })}

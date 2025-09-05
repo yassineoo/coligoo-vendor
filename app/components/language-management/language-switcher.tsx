@@ -1,31 +1,34 @@
 import { Dropdown } from "antd";
 import { useTranslation } from "react-i18next";
 import Global from "assets/icons/global.svg";
+import { useLanguage } from "./use-language";
+import clsx from "clsx";
 
 type Language = {
-  key: string;
   label: string;
   value: string;
 };
 
 export default function LanguageSwitcher() {
-  const { t, i18n } = useTranslation();
+  const { currentLanguage, changeLanguage } = useLanguage();
+
   const languages: Language[] = [
-    { key: "en", label: "English", value: "en" },
-    { key: "fr", label: "Français", value: "fr" },
-    { key: "ar", label: "العربية", value: "ar" },
+    { label: "English", value: "en" },
+    { label: "Français", value: "fr" },
+    { label: "العربية", value: "ar" },
   ];
 
   const handleLanguageChange = (language: Language) => {
-    console.log("Language changed to:", language);
-    // TODO: Implement language change logic
-    i18n.changeLanguage(language.value);
+    changeLanguage(language.value);
   };
+
   const languageMenuItems = languages.map((lang) => ({
-    key: lang.key,
+    key: lang.value,
     label: (
       <div
-        className="text-center py-1"
+        className={clsx("text-center py-1", {
+          "font-bold": currentLanguage === lang.value,
+        })}
         onClick={() => handleLanguageChange(lang)}
       >
         {lang.label}

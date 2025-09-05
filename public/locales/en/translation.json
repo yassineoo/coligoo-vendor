@@ -100,21 +100,22 @@
       "description": "There are no orders to display at the moment."
     }
   },
-  "products_table": {
+  "products": {
+    "title": "Table of Products",
     "table": {
       "product_name": "Product Name",
       "product_alias": "Product Alias",
-      "options": "Options",
-      "cost_range": "Cost Range",
+      "variables": "Variables",
       "category": "Category",
-      "in_stock": "In Stock",
+      "quantity": "Quantity",
       "actions": "Actions"
     },
-    "empty_state": {
-      "title": "No products found",
-      "description": "There are no products to display at the moment."
-    },
-    "add_product": "Add Product"
+
+    "add_product": "Add Product",
+    "actions": {
+      "edit": "Edit",
+      "delete": "Delete"
+    }
   },
   "returned_table": {
     "table": {
