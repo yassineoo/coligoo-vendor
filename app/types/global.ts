@@ -1,0 +1,20 @@
+export type User = {
+  id: number;
+  email: string;
+  nom: string;
+  prenom: string;
+  fullName: string;
+  role: string;
+  permissions: string;
+  hubId: string;
+  hubAdmin: string;
+  createdAt: string;
+  dob: string;
+  phoneNumber: string;
+  sex: string;
+  isEmailVerified: boolean;
+  imgUrl: string;
+  blocked: boolean;
+  deviceToken: string;
+  hubEmployeesCount: number;
+};

@@ -79,9 +79,9 @@ export default function DeliveryInsights() {
                   <span className="text-xs font-semibold text-gray-800 capitalize w-12">
                     {wilaya.name}
                   </span>
-                  <div className="flex-1 bg-gradient-to-r from-orange-500 to-orange-200 h-4 rounded-sm relative">
+                  <div className="flex-1  h-4 rounded-sm relative">
                     <div
-                      className="bg-gradient-to-r from-orange-500 to-yellow-300/5 h-full rounded-sm"
+                      className=" h-full bg-linear-to-r from-orange  to-yellow/50 rounded-sm"
                       style={{
                         width: `${(wilaya.orders / Math.max(...wilayasData.map((w) => w.orders))) * 100}%`,
                       }}

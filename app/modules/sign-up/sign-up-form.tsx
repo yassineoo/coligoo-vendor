@@ -1,14 +1,47 @@
-import { Form, Input, Button, Checkbox } from "antd";
+import { Form, Input, Button, Checkbox, App } from "antd";
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
 import mainLogo from "assets/main-logo.svg";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import type { SignUpFormData } from "./sign-up-schema";
 import { signUpFormRules } from "./sign-up-schema";
+import { useMutation } from "@tanstack/react-query";
+import { registerVendor } from "./api/sign-up-api";
+import { saveToken } from "~/utils/manage-token";
+import { useAppDispatch } from "~/redux/hooks";
+import { setUser } from "./redux/user-slice";
 
 export default function SignUpForm() {
   const [form] = Form.useForm();
+  const { notification } = App.useApp();
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
-  const handleSubmit = (values: SignUpFormData) => {};
+  const mutation = useMutation({
+    mutationFn: registerVendor,
+    onSuccess: (data) => {
+      // Invalidate and refetch
+      console.log("Response Data:", data);
+      saveToken(data?.data?.token);
+      dispatch(setUser(data?.data?.userInfo));
+      notification.success({
+        message: "Success",
+        description: data?.data?.msg || "Account created successfully!",
+      });
+      navigate("/dashboard/home", { replace: true });
+    },
+    onError: (error: any) => {
+      console.error("Error Details:", error);
+      notification.error({
+        message: "Error",
+        description:
+          error?.response?.data?.fr || "Something went wrong. Try again.",
+      });
+    },
+  });
+
+  const handleSubmit = (values: SignUpFormData) => {
+    mutation.mutate(values);
+  };
 
   const handleConfirmPasswordValidation = ({ getFieldValue }: any) => ({
     validator(_: any, value: string) {
@@ -20,7 +53,7 @@ export default function SignUpForm() {
   });
 
   return (
-    <div className="flex flex-col items-center justify-center h-full max-w-sm mx-auto">
+    <div className="flex flex-col py-12 items-center justify-center h-full max-w-sm mx-auto">
       {/* Logo */}
       <div className="mb-8">
         <img src={mainLogo} alt="Main Logo" className="w-24" />
@@ -51,6 +84,7 @@ export default function SignUpForm() {
           onFinish={handleSubmit}
           className="w-full"
           size="large"
+          requiredMark={false} // Add this prop to hide asterisks for this form
         >
           {/* Full Name Field */}
           <Form.Item
@@ -58,16 +92,7 @@ export default function SignUpForm() {
             name="fullName"
             rules={signUpFormRules.fullName}
           >
-            <Input placeholder="hamza bouchanane" />
-          </Form.Item>
-
-          {/* Phone Number Field */}
-          <Form.Item
-            label="Phone Number"
-            name="phoneNumber"
-            rules={signUpFormRules.phoneNumber}
-          >
-            <Input placeholder="05555555551" />
+            <Input placeholder="Hamza Bendahmane" />
           </Form.Item>
 
           {/* Email Field */}
@@ -106,43 +131,15 @@ export default function SignUpForm() {
             />
           </Form.Item>
 
-          {/* CAPTCHA Field */}
-          <Form.Item
-            label="Introduisez le code sur l'image"
-            name="captcha"
-            rules={signUpFormRules.captcha}
-          >
-            <div className="space-y-2">
-              {/* CAPTCHA Image Placeholder */}
-              <div className="w-48 h-18 bg-gray-200 rounded-lg flex items-center justify-center border">
-                <span className="text-gray-500 text-sm">CAPTCHA Image</span>
-              </div>
-              <Input placeholder="Enter CAPTCHA" />
-            </div>
-          </Form.Item>
-
-          {/* Terms Agreement */}
-          <Form.Item
-            name="agreeToTerms"
-            valuePropName="checked"
-            rules={[
-              {
-                validator: (_, value) =>
-                  value
-                    ? Promise.resolve()
-                    : Promise.reject(new Error("You must agree to the terms")),
-              },
-            ]}
-          >
-            <Checkbox>
-              I'm agree to The Terms of Service and Privacy Policy
-            </Checkbox>
-          </Form.Item>
-
-          {/* Submit Button */}
           <Form.Item>
-            <Button type="primary" htmlType="submit">
-              Create Account
+            <Button
+              type="primary"
+              htmlType="submit"
+              loading={mutation.isPending}
+              disabled={mutation.isPending}
+              className="w-full"
+            >
+              {mutation.isPending ? "Creating Account..." : "Create Account"}
             </Button>
           </Form.Item>
         </Form>

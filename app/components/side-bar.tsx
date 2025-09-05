@@ -11,6 +11,7 @@ import PriceApplied from "assets/icons/price-applied.svg?react";
 import Development from "assets/icons/dev.svg?react";
 import Settings from "assets/icons/setting.svg?react";
 import Payment from "assets/icons/payment.svg?react";
+import logout from "assets/icons/logout.svg?react";
 
 import clsx from "clsx";
 

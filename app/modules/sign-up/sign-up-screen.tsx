@@ -8,7 +8,7 @@ export default function SignUpScreen() {
       <div className=" basis-1/2">
         <SignUpForm />
       </div>
-      <div className=" relative  basis-1/2 flex items-center justify-center">
+      <div className=" sticky top-0 h-screen basis-1/2 flex items-center justify-center">
         <img
           className=" w-[70%] relative z-10 "
           src={authCard}

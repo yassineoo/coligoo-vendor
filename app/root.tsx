@@ -13,7 +13,13 @@ import "@ant-design/v5-patch-for-react-19";
 
 import type { Route } from "./+types/root";
 import "./app.css";
-import { ConfigProvider } from "antd";
+import { ConfigProvider, App as AntdApp } from "antd";
+import { Provider } from "react-redux";
+
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { store } from "./redux/store";
+
+const queryClient = new QueryClient();
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -38,19 +44,24 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <ConfigProvider
-          theme={{
-            token: {
-              // Seed Token
-              colorPrimary: "#FF5901",
-              borderRadius: 8,
+        <Provider store={store}>
+          <QueryClientProvider client={queryClient}>
+            <ConfigProvider
+              theme={{
+                token: {
+                  // Seed Token
+                  colorPrimary: "#FF5901",
+                  borderRadius: 8,
 
-              // Alias Token
-            },
-          }}
-        >
-          {children}
-        </ConfigProvider>
+                  // Alias Token
+                },
+              }}
+            >
+              {children}
+            </ConfigProvider>
+          </QueryClientProvider>
+        </Provider>
+
         <ScrollRestoration />
         <Scripts />
       </body>

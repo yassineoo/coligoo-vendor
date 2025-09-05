@@ -1,8 +1,18 @@
 import authBg from "assets/auth-bg.png";
 import authCard from "assets/auth-card.png";
 import LoginForm from "./login-form";
+import UseCheckAuth from "~/hooks/check-auth/use-check-auth";
+import AuthSpin from "~/components/auth/auth-spin";
+import { Navigate } from "react-router";
 
 export default function LoginScreen() {
+  const { isAuthenticated, isChecking, isGettingInfos } = UseCheckAuth();
+  if (isChecking || isGettingInfos) {
+    return <AuthSpin />;
+  }
+  if (isAuthenticated) {
+    return <Navigate to="/dashboard/home" replace />;
+  }
   return (
     <div className=" flex min-h-screen ">
       <div className=" basis-1/2">
