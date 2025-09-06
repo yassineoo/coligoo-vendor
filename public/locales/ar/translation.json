@@ -223,5 +223,46 @@
       "address_required": "العنوان مطلوب",
       "product_required": "المنتج مطلوب"
     }
+  },
+  "add_product": {
+    "title": "معلومات المنتج",
+    "product_name": "اسم المنتج",
+    "product_alias": "اسم مستعار للمنتج",
+    "category": "الفئة",
+    "description": "الوصف",
+    "price": "السعر",
+    "quantity": "الكمية",
+    "has_variables": "المنتج له متغيرات",
+    "show_alias_in_order": "إظهار الاسم المستعار في الطلب",
+    "add_product": "إضافة منتج",
+    "update_product": "تحديث المنتج",
+    "adding": "جاري الإضافة...",
+    "updating": "جاري التحديث...",
+    "select_category": "اختر فئة",
+    "validation": {
+      "product_name_required": "يرجى إدخال اسم المنتج!",
+      "product_name_string": "اسم المنتج يجب أن يكون نص!",
+      "product_alias_required": "يرجى إدخال اسم مستعار للمنتج!",
+      "product_alias_string": "الاسم المستعار يجب أن يكون نص!",
+      "category_required": "يرجى اختيار فئة!",
+      "description_required": "يرجى إدخال وصف!",
+      "description_string": "الوصف يجب أن يكون نص!",
+      "price_required": "يرجى إدخال السعر!",
+      "price_positive": "السعر يجب أن يكون رقم موجب!",
+      "quantity_required": "يرجى إدخال الكمية!",
+      "quantity_positive": "الكمية يجب أن تكون رقم موجب!"
+    },
+    "categories": {
+      "electronics": "الإلكترونيات",
+      "clothing": "الملابس",
+      "home_garden": "المنزل والحديقة",
+      "sports_outdoors": "الرياضة والأنشطة الخارجية",
+      "books": "الكتب",
+      "toys_games": "الألعاب والترفيه",
+      "health_beauty": "الصحة والجمال",
+      "automotive": "السيارات",
+      "jewelry": "المجوهرات",
+      "food_beverages": "الأطعمة والمشروبات"
+    }
   }
 }

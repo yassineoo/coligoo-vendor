@@ -1,20 +1,44 @@
-import { Table, Button, Skeleton } from "antd";
+import { Table, Button, Skeleton, notification } from "antd";
 import type { Key } from "antd/es/table/interface";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import EmptyState from "../../../components/empty-state";
-import { useQuery } from "@tanstack/react-query";
-import { getAllProducts } from "../api/products-api";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { deleteProduct, getAllProducts } from "../api/products-api";
 import ErrorComp from "~/components/error-comp";
+import { IconEdit, IconTrash } from "@tabler/icons-react";
+import { Link } from "react-router";
+import type { Product } from "~/types/global";
 
 export default function ProductsTable() {
   const { t } = useTranslation();
   const [selectedRowKeys, setSelectedRowKeys] = useState<Key[]>([]);
+  const queryClient = useQueryClient();
+
   const { data, isLoading, isError, error, isSuccess } = useQuery({
     queryKey: ["products"],
     queryFn: getAllProducts,
   });
-  console.log("products data", data?.data?.data?.length);
+
+  const deleteProductMutation = useMutation({
+    mutationFn: ({ id }: { id: number }) => deleteProduct(id),
+    onSuccess: (data) => {
+      console.log("Response Data:", data);
+      notification.success({
+        message: "Success",
+        description: "Product deleted successfully!",
+      });
+      queryClient.invalidateQueries({ queryKey: ["products"] });
+    },
+    onError: (error: any) => {
+      console.error("Error Details:", error);
+      notification.error({
+        message: "Error",
+        description:
+          error?.response?.data?.message || "Something went wrong. Try again.",
+      });
+    },
+  });
 
   const columns = [
     {
@@ -55,43 +79,23 @@ export default function ProductsTable() {
       title: t("products.table.actions"),
       key: "actions",
       width: 120,
-      render: () => (
+      render: (_: any, record: Product) => (
         <div className="flex gap-2">
+          <Link
+            type="primary"
+            to={`/dashboard/products/add-update-product/${record.id}`}
+            className="!bg-orange-500 flex px-1 items-center justify-center !rounded-lg  !border-orange-500 hover:!bg-orange-500/90 hover:!border-orange-600"
+          >
+            <IconEdit className=" !stroke-white" stroke={1} size={16} />
+          </Link>
           <Button
             type="primary"
             size="small"
+            onClick={() => {
+              deleteProductMutation.mutate({ id: record.id });
+            }}
             className="bg-orange-500 border-orange-500 hover:bg-orange-600 hover:border-orange-600"
-            icon={
-              <img
-                src="/app/components/icons/info-circle-icon.svg"
-                alt="info"
-                className="w-4 h-4 filter brightness-0 invert"
-              />
-            }
-          />
-          <Button
-            type="primary"
-            size="small"
-            className="bg-orange-500 border-orange-500 hover:bg-orange-600 hover:border-orange-600"
-            icon={
-              <img
-                src="/app/components/icons/edit-icon.svg"
-                alt="edit"
-                className="w-4 h-4 filter brightness-0 invert"
-              />
-            }
-          />
-          <Button
-            type="primary"
-            size="small"
-            className="bg-orange-500 border-orange-500 hover:bg-orange-600 hover:border-orange-600"
-            icon={
-              <img
-                src="/app/components/icons/trash-icon.svg"
-                alt="delete"
-                className="w-4 h-4 filter brightness-0 invert"
-              />
-            }
+            icon={<IconTrash stroke={1} size={16} />}
           />
         </div>
       ),

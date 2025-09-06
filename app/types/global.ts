@@ -25,7 +25,7 @@ export type Product = {
   productAlias: string;
   category: string;
   description: string;
-  price: string;
+  price: number;
   quantity: number;
   hasVariables: boolean;
   variables: any;

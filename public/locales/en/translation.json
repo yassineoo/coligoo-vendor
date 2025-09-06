@@ -223,5 +223,46 @@
       "address_required": "Address is required",
       "product_required": "Product is required"
     }
+  },
+  "add_product": {
+    "title": "Product Information",
+    "product_name": "Product Name",
+    "product_alias": "Product Alias",
+    "category": "Category",
+    "description": "Description",
+    "price": "Price",
+    "quantity": "Quantity",
+    "has_variables": "A product has variables",
+    "show_alias_in_order": "Show alias name in the order",
+    "add_product": "Add Product",
+    "update_product": "Update Product",
+    "adding": "Adding...",
+    "updating": "Updating...",
+    "select_category": "Select a category",
+    "validation": {
+      "product_name_required": "Please input your product name!",
+      "product_name_string": "Product name must be a string!",
+      "product_alias_required": "Please input your product alias!",
+      "product_alias_string": "Product alias must be a string!",
+      "category_required": "Please select a category!",
+      "description_required": "Please input a description!",
+      "description_string": "Description must be a string!",
+      "price_required": "Please input the price!",
+      "price_positive": "Price must be a positive number!",
+      "quantity_required": "Please input the quantity!",
+      "quantity_positive": "Quantity must be a positive number!"
+    },
+    "categories": {
+      "electronics": "Electronics",
+      "clothing": "Clothing",
+      "home_garden": "Home & Garden",
+      "sports_outdoors": "Sports & Outdoors",
+      "books": "Books",
+      "toys_games": "Toys & Games",
+      "health_beauty": "Health & Beauty",
+      "automotive": "Automotive",
+      "jewelry": "Jewelry",
+      "food_beverages": "Food & Beverages"
+    }
   }
 }

@@ -2,11 +2,13 @@ import {
   isRouteErrorResponse,
   Links,
   Meta,
+  Outlet,
   Scripts,
   ScrollRestoration,
 } from "react-router";
 import React from "react";
 import "./i18n";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 import "@ant-design/v5-patch-for-react-19";
 
@@ -60,6 +62,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             >
               {children}
             </ConfigProvider>
+            <ReactQueryDevtools initialIsOpen={false} />
           </QueryClientProvider>
         </Provider>
 
@@ -68,6 +71,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </body>
     </html>
   );
+}
+
+export default function App() {
+  return <Outlet />;
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {

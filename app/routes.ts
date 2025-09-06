@@ -18,7 +18,7 @@ export default [
     ),
     route("/dashboard/products", "./routes/products.tsx"),
     route(
-      "/dashboard/products/add-update-product",
+      "/dashboard/products/add-update-product/:id?",
       "./routes/add-update-product.tsx"
     ),
     route("/dashboard/returned", "./routes/returned.tsx"),

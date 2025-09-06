@@ -223,5 +223,46 @@
       "address_required": "L'adresse est requise",
       "product_required": "Le produit est requis"
     }
+  },
+  "add_product": {
+    "title": "Informations sur le produit",
+    "product_name": "Nom du produit",
+    "product_alias": "Alias du produit",
+    "category": "Catégorie",
+    "description": "Description",
+    "price": "Prix",
+    "quantity": "Quantité",
+    "has_variables": "Un produit a des variables",
+    "show_alias_in_order": "Afficher le nom d'alias dans la commande",
+    "add_product": "Ajouter un produit",
+    "update_product": "Mettre à jour le produit",
+    "adding": "Ajout en cours...",
+    "updating": "Mise à jour en cours...",
+    "select_category": "Sélectionner une catégorie",
+    "validation": {
+      "product_name_required": "Veuillez saisir le nom de votre produit!",
+      "product_name_string": "Le nom du produit doit être une chaîne de caractères!",
+      "product_alias_required": "Veuillez saisir l'alias de votre produit!",
+      "product_alias_string": "L'alias du produit doit être une chaîne de caractères!",
+      "category_required": "Veuillez sélectionner une catégorie!",
+      "description_required": "Veuillez saisir une description!",
+      "description_string": "La description doit être une chaîne de caractères!",
+      "price_required": "Veuillez saisir le prix!",
+      "price_positive": "Le prix doit être un nombre positif!",
+      "quantity_required": "Veuillez saisir la quantité!",
+      "quantity_positive": "La quantité doit être un nombre positif!"
+    },
+    "categories": {
+      "electronics": "Électronique",
+      "clothing": "Vêtements",
+      "home_garden": "Maison et jardin",
+      "sports_outdoors": "Sports et plein air",
+      "books": "Livres",
+      "toys_games": "Jouets et jeux",
+      "health_beauty": "Santé et beauté",
+      "automotive": "Automobile",
+      "jewelry": "Bijoux",
+      "food_beverages": "Alimentation et boissons"
+    }
   }
 }
