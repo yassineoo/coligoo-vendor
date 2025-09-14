@@ -6,7 +6,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
-import React from "react";
+import type { PropsWithChildren, ReactNode } from "react";
 import "./i18n";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
@@ -23,23 +23,22 @@ import { useLanguage } from "./components/language-management/use-language";
 
 const queryClient = new QueryClient();
 
-export const links: Route.LinksFunction = () => [
-  { rel: "preconnect", href: "https://fonts.googleapis.com" },
-  {
-    rel: "preconnect",
-    href: "https://fonts.gstatic.com",
-    crossOrigin: "anonymous",
-  },
-  {
-    rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap",
-  },
-];
+// export const links: Route.LinksFunction = () => [
+//   { rel: "preconnect", href: "https://fonts.googleapis.com" },
+//   {
+//     rel: "preconnect",
+//     href: "https://fonts.gstatic.com",
+//     crossOrigin: "anonymous",
+//   },
+//   {
+//     rel: "stylesheet",
+//     href: "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap",
+//   },
+// ];
 
-export function Layout({ children }: { children: React.ReactNode }) {
-  const { isRTL, currentLanguage } = useLanguage();
+export function Layout({ children }: { children: ReactNode }) {
   return (
-    <html lang={currentLanguage} dir={isRTL ? "rtl" : "ltr"}>
+    <html>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -52,11 +51,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <ConfigProvider
               theme={{
                 token: {
-                  // Seed Token
                   colorPrimary: "#FF5901",
                   borderRadius: 8,
-
-                  // Alias Token
                 },
               }}
             >
@@ -65,7 +61,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <ReactQueryDevtools initialIsOpen={false} />
           </QueryClientProvider>
         </Provider>
-
         <ScrollRestoration />
         <Scripts />
       </body>
@@ -74,7 +69,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  const { isRTL, currentLanguage } = useLanguage();
+
+  return (
+    <div lang={currentLanguage} dir={isRTL ? "rtl" : "ltr"}>
+      <Outlet />
+    </div>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
