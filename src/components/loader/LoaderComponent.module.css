@@ -1,0 +1,96 @@
+.loader {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ff5a01;
+}
+
+.dot1 {
+  top: 0;
+  left: 16px;
+  animation: convergeTop 1.5s ease-in-out infinite;
+}
+
+@keyframes convergeTop {
+  0%,
+  100% {
+    top: 0;
+    left: 16px;
+  }
+  50% {
+    top: 16px;
+    left: 16px;
+  }
+}
+
+.dot2 {
+  top: 16px;
+  left: 32px;
+  animation: convergeRight 1.5s ease-in-out infinite;
+}
+
+@keyframes convergeRight {
+  0%,
+  100% {
+    top: 16px;
+    left: 32px;
+  }
+  50% {
+    top: 16px;
+    left: 16px;
+  }
+}
+
+.dot3 {
+  top: 32px;
+  left: 16px;
+  animation: convergeBottom 1.5s ease-in-out infinite;
+}
+
+@keyframes convergeBottom {
+  0%,
+  100% {
+    top: 32px;
+    left: 16px;
+  }
+  50% {
+    top: 16px;
+    left: 16px;
+  }
+}
+
+.dot4 {
+  top: 16px;
+  left: 0;
+  animation: convergeLeft 1.5s ease-in-out infinite;
+}
+
+@keyframes convergeLeft {
+  0%,
+  100% {
+    top: 16px;
+    left: 0;
+  }
+  50% {
+    top: 16px;
+    left: 16px;
+  }
+}

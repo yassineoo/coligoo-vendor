@@ -1,0 +1,1667 @@
+{
+  "database": "jyattou_coligoo",
+  "tables": [
+    {
+      "name": "admin_notification",
+      "type": "BASE TABLE",
+      "columns": [
+        {
+          "name": "id",
+          "position": 1,
+          "default": null,
+          "nullable": false,
+          "data_type": "int",
+          "max_length": null,
+          "column_type": "int(11)",
+          "key": "PRI",
+          "extra": "auto_increment"
+        },
+        {
+          "name": "title",
+          "position": 2,
+          "default": null,
+          "nullable": false,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "content",
+          "position": 3,
+          "default": null,
+          "nullable": false,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "read",
+          "position": 4,
+          "default": "0",
+          "nullable": false,
+          "data_type": "tinyint",
+          "max_length": null,
+          "column_type": "tinyint(4)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "createdAt",
+          "position": 5,
+          "default": "current_timestamp(6)",
+          "nullable": false,
+          "data_type": "datetime",
+          "max_length": null,
+          "column_type": "datetime(6)",
+          "key": "",
+          "extra": ""
+        }
+      ],
+      "indexes": [
+        {
+          "name": "PRIMARY",
+          "non_unique": false,
+          "columns": [
+            {
+              "name": "id",
+              "seq": 1,
+              "collation": "A",
+              "cardinality": 0
+            }
+          ]
+        }
+      ],
+      "foreign_keys": []
+    },
+    {
+      "name": "city",
+      "type": "BASE TABLE",
+      "columns": [
+        {
+          "name": "id",
+          "position": 1,
+          "default": null,
+          "nullable": false,
+          "data_type": "int",
+          "max_length": null,
+          "column_type": "int(11)",
+          "key": "PRI",
+          "extra": "auto_increment"
+        },
+        {
+          "name": "name",
+          "position": 2,
+          "default": null,
+          "nullable": false,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "ar_name",
+          "position": 3,
+          "default": null,
+          "nullable": false,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "wilayaCode",
+          "position": 4,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "MUL",
+          "extra": ""
+        }
+      ],
+      "indexes": [
+        {
+          "name": "FK_9dd10b0fcd7c2e3e46bc4da8205",
+          "non_unique": true,
+          "columns": [
+            {
+              "name": "wilayaCode",
+              "seq": 1,
+              "collation": "A",
+              "cardinality": 117
+            }
+          ]
+        },
+        {
+          "name": "PRIMARY",
+          "non_unique": false,
+          "columns": [
+            {
+              "name": "id",
+              "seq": 1,
+              "collation": "A",
+              "cardinality": 2699
+            }
+          ]
+        }
+      ],
+      "foreign_keys": [
+        {
+          "name": "FK_9dd10b0fcd7c2e3e46bc4da8205",
+          "columns": [
+            "wilayaCode"
+          ],
+          "referenced_table": "wilaya",
+          "referenced_columns": [
+            "code"
+          ],
+          "update_rule": "NO ACTION",
+          "delete_rule": "NO ACTION"
+        }
+      ]
+    },
+    {
+      "name": "notification",
+      "type": "BASE TABLE",
+      "columns": [
+        {
+          "name": "id",
+          "position": 1,
+          "default": null,
+          "nullable": false,
+          "data_type": "int",
+          "max_length": null,
+          "column_type": "int(11)",
+          "key": "PRI",
+          "extra": "auto_increment"
+        },
+        {
+          "name": "content",
+          "position": 2,
+          "default": null,
+          "nullable": false,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "ar_content",
+          "position": 3,
+          "default": null,
+          "nullable": false,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "type",
+          "position": 4,
+          "default": null,
+          "nullable": false,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "read",
+          "position": 5,
+          "default": "0",
+          "nullable": false,
+          "data_type": "tinyint",
+          "max_length": null,
+          "column_type": "tinyint(4)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "fileUploaded",
+          "position": 6,
+          "default": "0",
+          "nullable": false,
+          "data_type": "tinyint",
+          "max_length": null,
+          "column_type": "tinyint(4)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "createdAt",
+          "position": 7,
+          "default": "current_timestamp(6)",
+          "nullable": false,
+          "data_type": "datetime",
+          "max_length": null,
+          "column_type": "datetime(6)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "userId",
+          "position": 8,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "int",
+          "max_length": null,
+          "column_type": "int(11)",
+          "key": "MUL",
+          "extra": ""
+        }
+      ],
+      "indexes": [
+        {
+          "name": "FK_1ced25315eb974b73391fb1c81b",
+          "non_unique": true,
+          "columns": [
+            {
+              "name": "userId",
+              "seq": 1,
+              "collation": "A",
+              "cardinality": 0
+            }
+          ]
+        },
+        {
+          "name": "PRIMARY",
+          "non_unique": false,
+          "columns": [
+            {
+              "name": "id",
+              "seq": 1,
+              "collation": "A",
+              "cardinality": 0
+            }
+          ]
+        }
+      ],
+      "foreign_keys": [
+        {
+          "name": "FK_1ced25315eb974b73391fb1c81b",
+          "columns": [
+            "userId"
+          ],
+          "referenced_table": "user",
+          "referenced_columns": [
+            "id"
+          ],
+          "update_rule": "NO ACTION",
+          "delete_rule": "CASCADE"
+        }
+      ]
+    },
+    {
+      "name": "orders",
+      "type": "BASE TABLE",
+      "columns": [
+        {
+          "name": "id",
+          "position": 1,
+          "default": null,
+          "nullable": false,
+          "data_type": "int",
+          "max_length": null,
+          "column_type": "int(11)",
+          "key": "PRI",
+          "extra": "auto_increment"
+        },
+        {
+          "name": "orderId",
+          "position": 2,
+          "default": null,
+          "nullable": false,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "UNI",
+          "extra": ""
+        },
+        {
+          "name": "firstname",
+          "position": 3,
+          "default": null,
+          "nullable": false,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "contactPhone",
+          "position": 4,
+          "default": null,
+          "nullable": false,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "address",
+          "position": 5,
+          "default": null,
+          "nullable": false,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "price",
+          "position": 6,
+          "default": null,
+          "nullable": false,
+          "data_type": "decimal",
+          "max_length": null,
+          "column_type": "decimal(10,2)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "shippingFee",
+          "position": 7,
+          "default": "0.00",
+          "nullable": false,
+          "data_type": "decimal",
+          "max_length": null,
+          "column_type": "decimal(10,2)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "weight",
+          "position": 8,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "decimal",
+          "max_length": null,
+          "column_type": "decimal(10,2)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "height",
+          "position": 9,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "int",
+          "max_length": null,
+          "column_type": "int(11)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "width",
+          "position": 10,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "int",
+          "max_length": null,
+          "column_type": "int(11)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "length",
+          "position": 11,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "int",
+          "max_length": null,
+          "column_type": "int(11)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "isStopDesk",
+          "position": 12,
+          "default": "0",
+          "nullable": false,
+          "data_type": "tinyint",
+          "max_length": null,
+          "column_type": "tinyint(4)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "freeShipping",
+          "position": 13,
+          "default": "0",
+          "nullable": false,
+          "data_type": "tinyint",
+          "max_length": null,
+          "column_type": "tinyint(4)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "hasExchange",
+          "position": 14,
+          "default": "0",
+          "nullable": false,
+          "data_type": "tinyint",
+          "max_length": null,
+          "column_type": "tinyint(4)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "paymentType",
+          "position": 15,
+          "default": "'cash_on_delivery'",
+          "nullable": false,
+          "data_type": "enum",
+          "max_length": 16,
+          "column_type": "enum('cash_on_delivery','prepaid')",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "status",
+          "position": 16,
+          "default": "'pending'",
+          "nullable": false,
+          "data_type": "enum",
+          "max_length": 10,
+          "column_type": "enum('pending','confirmed','picked_up','in_transit','delivered','cancelled','returned')",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "createdAt",
+          "position": 17,
+          "default": "current_timestamp(6)",
+          "nullable": false,
+          "data_type": "datetime",
+          "max_length": null,
+          "column_type": "datetime(6)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "updatedAt",
+          "position": 18,
+          "default": "current_timestamp(6)",
+          "nullable": false,
+          "data_type": "datetime",
+          "max_length": null,
+          "column_type": "datetime(6)",
+          "key": "",
+          "extra": "on update current_timestamp(6)"
+        },
+        {
+          "name": "deliveredAt",
+          "position": 19,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "datetime",
+          "max_length": null,
+          "column_type": "datetime",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "cancelledAt",
+          "position": 20,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "datetime",
+          "max_length": null,
+          "column_type": "datetime",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "senderId",
+          "position": 21,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "int",
+          "max_length": null,
+          "column_type": "int(11)",
+          "key": "MUL",
+          "extra": ""
+        },
+        {
+          "name": "deliverymanId",
+          "position": 22,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "int",
+          "max_length": null,
+          "column_type": "int(11)",
+          "key": "MUL",
+          "extra": ""
+        },
+        {
+          "name": "fromCityId",
+          "position": 23,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "int",
+          "max_length": null,
+          "column_type": "int(11)",
+          "key": "MUL",
+          "extra": ""
+        },
+        {
+          "name": "toCityId",
+          "position": 24,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "int",
+          "max_length": null,
+          "column_type": "int(11)",
+          "key": "MUL",
+          "extra": ""
+        },
+        {
+          "name": "lastName",
+          "position": 25,
+          "default": null,
+          "nullable": false,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "contactPhone2",
+          "position": 26,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "note",
+          "position": 27,
+          "default": null,
+          "nullable": false,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "productList",
+          "position": 28,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "longtext",
+          "max_length": 4294967295,
+          "column_type": "longtext",
+          "key": "",
+          "extra": ""
+        }
+      ],
+      "indexes": [
+        {
+          "name": "FK_62772e8583880093247ec2bfe03",
+          "non_unique": true,
+          "columns": [
+            {
+              "name": "fromCityId",
+              "seq": 1,
+              "collation": "A",
+              "cardinality": 2
+            }
+          ]
+        },
+        {
+          "name": "FK_69366eb1b4b4c8b7ca7d751eead",
+          "non_unique": true,
+          "columns": [
+            {
+              "name": "deliverymanId",
+              "seq": 1,
+              "collation": "A",
+              "cardinality": 2
+            }
+          ]
+        },
+        {
+          "name": "FK_c9b5505e0b0009b77899d3e142f",
+          "non_unique": true,
+          "columns": [
+            {
+              "name": "senderId",
+              "seq": 1,
+              "collation": "A",
+              "cardinality": 2
+            }
+          ]
+        },
+        {
+          "name": "FK_ea237b6e0d83cf53461a6d78e6b",
+          "non_unique": true,
+          "columns": [
+            {
+              "name": "toCityId",
+              "seq": 1,
+              "collation": "A",
+              "cardinality": 2
+            }
+          ]
+        },
+        {
+          "name": "IDX_41ba27842ac1a2c24817ca59ea",
+          "non_unique": false,
+          "columns": [
+            {
+              "name": "orderId",
+              "seq": 1,
+              "collation": "A",
+              "cardinality": 4
+            }
+          ]
+        },
+        {
+          "name": "PRIMARY",
+          "non_unique": false,
+          "columns": [
+            {
+              "name": "id",
+              "seq": 1,
+              "collation": "A",
+              "cardinality": 4
+            }
+          ]
+        }
+      ],
+      "foreign_keys": [
+        {
+          "name": "FK_62772e8583880093247ec2bfe03",
+          "columns": [
+            "fromCityId"
+          ],
+          "referenced_table": "city",
+          "referenced_columns": [
+            "id"
+          ],
+          "update_rule": "NO ACTION",
+          "delete_rule": "NO ACTION"
+        },
+        {
+          "name": "FK_69366eb1b4b4c8b7ca7d751eead",
+          "columns": [
+            "deliverymanId"
+          ],
+          "referenced_table": "user",
+          "referenced_columns": [
+            "id"
+          ],
+          "update_rule": "NO ACTION",
+          "delete_rule": "NO ACTION"
+        },
+        {
+          "name": "FK_c9b5505e0b0009b77899d3e142f",
+          "columns": [
+            "senderId"
+          ],
+          "referenced_table": "user",
+          "referenced_columns": [
+            "id"
+          ],
+          "update_rule": "NO ACTION",
+          "delete_rule": "NO ACTION"
+        },
+        {
+          "name": "FK_ea237b6e0d83cf53461a6d78e6b",
+          "columns": [
+            "toCityId"
+          ],
+          "referenced_table": "city",
+          "referenced_columns": [
+            "id"
+          ],
+          "update_rule": "NO ACTION",
+          "delete_rule": "NO ACTION"
+        }
+      ]
+    },
+    {
+      "name": "order_items",
+      "type": "BASE TABLE",
+      "columns": [
+        {
+          "name": "id",
+          "position": 1,
+          "default": null,
+          "nullable": false,
+          "data_type": "int",
+          "max_length": null,
+          "column_type": "int(11)",
+          "key": "PRI",
+          "extra": "auto_increment"
+        },
+        {
+          "name": "order_id",
+          "position": 2,
+          "default": null,
+          "nullable": false,
+          "data_type": "int",
+          "max_length": null,
+          "column_type": "int(11)",
+          "key": "MUL",
+          "extra": ""
+        },
+        {
+          "name": "product_id",
+          "position": 3,
+          "default": null,
+          "nullable": false,
+          "data_type": "int",
+          "max_length": null,
+          "column_type": "int(11)",
+          "key": "MUL",
+          "extra": ""
+        },
+        {
+          "name": "quantity",
+          "position": 4,
+          "default": "1",
+          "nullable": false,
+          "data_type": "int",
+          "max_length": null,
+          "column_type": "int(11)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "unitPrice",
+          "position": 5,
+          "default": null,
+          "nullable": false,
+          "data_type": "decimal",
+          "max_length": null,
+          "column_type": "decimal(10,2)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "productVariations",
+          "position": 6,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "text",
+          "max_length": 65535,
+          "column_type": "text",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "notes",
+          "position": 7,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "text",
+          "max_length": 65535,
+          "column_type": "text",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "created_at",
+          "position": 8,
+          "default": "current_timestamp(6)",
+          "nullable": false,
+          "data_type": "datetime",
+          "max_length": null,
+          "column_type": "datetime(6)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "updated_at",
+          "position": 9,
+          "default": "current_timestamp(6)",
+          "nullable": false,
+          "data_type": "datetime",
+          "max_length": null,
+          "column_type": "datetime(6)",
+          "key": "",
+          "extra": "on update current_timestamp(6)"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "FK_145532db85752b29c57d2b7b1f1",
+          "non_unique": true,
+          "columns": [
+            {
+              "name": "order_id",
+              "seq": 1,
+              "collation": "A",
+              "cardinality": 4
+            }
+          ]
+        },
+        {
+          "name": "FK_9263386c35b6b242540f9493b00",
+          "non_unique": true,
+          "columns": [
+            {
+              "name": "product_id",
+              "seq": 1,
+              "collation": "A",
+              "cardinality": 2
+            }
+          ]
+        },
+        {
+          "name": "PRIMARY",
+          "non_unique": false,
+          "columns": [
+            {
+              "name": "id",
+              "seq": 1,
+              "collation": "A",
+              "cardinality": 4
+            }
+          ]
+        }
+      ],
+      "foreign_keys": [
+        {
+          "name": "FK_145532db85752b29c57d2b7b1f1",
+          "columns": [
+            "order_id"
+          ],
+          "referenced_table": "orders",
+          "referenced_columns": [
+            "id"
+          ],
+          "update_rule": "NO ACTION",
+          "delete_rule": "CASCADE"
+        },
+        {
+          "name": "FK_9263386c35b6b242540f9493b00",
+          "columns": [
+            "product_id"
+          ],
+          "referenced_table": "products",
+          "referenced_columns": [
+            "id"
+          ],
+          "update_rule": "NO ACTION",
+          "delete_rule": "NO ACTION"
+        }
+      ]
+    },
+    {
+      "name": "order_tracking",
+      "type": "BASE TABLE",
+      "columns": [
+        {
+          "name": "id",
+          "position": 1,
+          "default": null,
+          "nullable": false,
+          "data_type": "int",
+          "max_length": null,
+          "column_type": "int(11)",
+          "key": "PRI",
+          "extra": "auto_increment"
+        },
+        {
+          "name": "orderId",
+          "position": 2,
+          "default": null,
+          "nullable": false,
+          "data_type": "int",
+          "max_length": null,
+          "column_type": "int(11)",
+          "key": "MUL",
+          "extra": ""
+        },
+        {
+          "name": "status",
+          "position": 3,
+          "default": null,
+          "nullable": false,
+          "data_type": "enum",
+          "max_length": 10,
+          "column_type": "enum('pending','confirmed','picked_up','in_transit','delivered','cancelled','returned')",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "location",
+          "position": 4,
+          "default": null,
+          "nullable": false,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "note",
+          "position": 5,
+          "default": null,
+          "nullable": false,
+          "data_type": "text",
+          "max_length": 65535,
+          "column_type": "text",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "proofPhoto",
+          "position": 6,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "signature",
+          "position": 7,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "timestamp",
+          "position": 8,
+          "default": "current_timestamp(6)",
+          "nullable": false,
+          "data_type": "datetime",
+          "max_length": null,
+          "column_type": "datetime(6)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "updatedById",
+          "position": 9,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "int",
+          "max_length": null,
+          "column_type": "int(11)",
+          "key": "MUL",
+          "extra": ""
+        }
+      ],
+      "indexes": [
+        {
+          "name": "FK_85acfbdf5c1c33daca863f8118b",
+          "non_unique": true,
+          "columns": [
+            {
+              "name": "orderId",
+              "seq": 1,
+              "collation": "A",
+              "cardinality": 0
+            }
+          ]
+        },
+        {
+          "name": "FK_d06a5f651b59668f29fb840db4d",
+          "non_unique": true,
+          "columns": [
+            {
+              "name": "updatedById",
+              "seq": 1,
+              "collation": "A",
+              "cardinality": 0
+            }
+          ]
+        },
+        {
+          "name": "PRIMARY",
+          "non_unique": false,
+          "columns": [
+            {
+              "name": "id",
+              "seq": 1,
+              "collation": "A",
+              "cardinality": 0
+            }
+          ]
+        }
+      ],
+      "foreign_keys": [
+        {
+          "name": "FK_85acfbdf5c1c33daca863f8118b",
+          "columns": [
+            "orderId"
+          ],
+          "referenced_table": "orders",
+          "referenced_columns": [
+            "id"
+          ],
+          "update_rule": "NO ACTION",
+          "delete_rule": "CASCADE"
+        },
+        {
+          "name": "FK_d06a5f651b59668f29fb840db4d",
+          "columns": [
+            "updatedById"
+          ],
+          "referenced_table": "user",
+          "referenced_columns": [
+            "id"
+          ],
+          "update_rule": "NO ACTION",
+          "delete_rule": "NO ACTION"
+        }
+      ]
+    },
+    {
+      "name": "otp",
+      "type": "BASE TABLE",
+      "columns": [
+        {
+          "name": "otp",
+          "position": 1,
+          "default": null,
+          "nullable": false,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "email",
+          "position": 2,
+          "default": null,
+          "nullable": false,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "PRI",
+          "extra": ""
+        },
+        {
+          "name": "createdAt",
+          "position": 3,
+          "default": "current_timestamp(6)",
+          "nullable": false,
+          "data_type": "datetime",
+          "max_length": null,
+          "column_type": "datetime(6)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "type",
+          "position": 4,
+          "default": null,
+          "nullable": false,
+          "data_type": "enum",
+          "max_length": 14,
+          "column_type": "enum('reset-password','verify-email')",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "expiresAt",
+          "position": 5,
+          "default": null,
+          "nullable": false,
+          "data_type": "datetime",
+          "max_length": null,
+          "column_type": "datetime",
+          "key": "",
+          "extra": ""
+        }
+      ],
+      "indexes": [
+        {
+          "name": "PRIMARY",
+          "non_unique": false,
+          "columns": [
+            {
+              "name": "email",
+              "seq": 1,
+              "collation": "A",
+              "cardinality": 15
+            }
+          ]
+        }
+      ],
+      "foreign_keys": []
+    },
+    {
+      "name": "products",
+      "type": "BASE TABLE",
+      "columns": [
+        {
+          "name": "id",
+          "position": 1,
+          "default": null,
+          "nullable": false,
+          "data_type": "int",
+          "max_length": null,
+          "column_type": "int(11)",
+          "key": "PRI",
+          "extra": "auto_increment"
+        },
+        {
+          "name": "product_name",
+          "position": 2,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "product_alias",
+          "position": 3,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "category",
+          "position": 4,
+          "default": "'Electronics'",
+          "nullable": true,
+          "data_type": "enum",
+          "max_length": 17,
+          "column_type": "enum('Electronics','Clothing','Home & Garden','Sports & Outdoors','Books','Toys & Games','Health & Beauty','Automotive','Jewelry','Food & Beverages')",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "description",
+          "position": 5,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "text",
+          "max_length": 65535,
+          "column_type": "text",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "price",
+          "position": 6,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "decimal",
+          "max_length": null,
+          "column_type": "decimal(10,2)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "quantity",
+          "position": 7,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "int",
+          "max_length": null,
+          "column_type": "int(11)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "has_variables",
+          "position": 8,
+          "default": "0",
+          "nullable": true,
+          "data_type": "tinyint",
+          "max_length": null,
+          "column_type": "tinyint(4)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "show_alias_in_order",
+          "position": 9,
+          "default": "0",
+          "nullable": true,
+          "data_type": "tinyint",
+          "max_length": null,
+          "column_type": "tinyint(4)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "vendor_id",
+          "position": 10,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "int",
+          "max_length": null,
+          "column_type": "int(11)",
+          "key": "MUL",
+          "extra": ""
+        },
+        {
+          "name": "created_at",
+          "position": 11,
+          "default": "current_timestamp(6)",
+          "nullable": false,
+          "data_type": "datetime",
+          "max_length": null,
+          "column_type": "datetime(6)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "updated_at",
+          "position": 12,
+          "default": "current_timestamp(6)",
+          "nullable": false,
+          "data_type": "datetime",
+          "max_length": null,
+          "column_type": "datetime(6)",
+          "key": "",
+          "extra": "on update current_timestamp(6)"
+        },
+        {
+          "name": "variables",
+          "position": 13,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "longtext",
+          "max_length": 4294967295,
+          "column_type": "longtext",
+          "key": "",
+          "extra": ""
+        }
+      ],
+      "indexes": [
+        {
+          "name": "FK_0e859a83f1dd6b774c20c02885d",
+          "non_unique": true,
+          "columns": [
+            {
+              "name": "vendor_id",
+              "seq": 1,
+              "collation": "A",
+              "cardinality": 1
+            }
+          ]
+        },
+        {
+          "name": "PRIMARY",
+          "non_unique": false,
+          "columns": [
+            {
+              "name": "id",
+              "seq": 1,
+              "collation": "A",
+              "cardinality": 1
+            }
+          ]
+        }
+      ],
+      "foreign_keys": [
+        {
+          "name": "FK_0e859a83f1dd6b774c20c02885d",
+          "columns": [
+            "vendor_id"
+          ],
+          "referenced_table": "user",
+          "referenced_columns": [
+            "id"
+          ],
+          "update_rule": "NO ACTION",
+          "delete_rule": "NO ACTION"
+        }
+      ]
+    },
+    {
+      "name": "user",
+      "type": "BASE TABLE",
+      "columns": [
+        {
+          "name": "id",
+          "position": 1,
+          "default": null,
+          "nullable": false,
+          "data_type": "int",
+          "max_length": null,
+          "column_type": "int(11)",
+          "key": "PRI",
+          "extra": "auto_increment"
+        },
+        {
+          "name": "email",
+          "position": 2,
+          "default": null,
+          "nullable": false,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "UNI",
+          "extra": ""
+        },
+        {
+          "name": "password",
+          "position": 3,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "nom",
+          "position": 4,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "prenom",
+          "position": 5,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "role",
+          "position": 6,
+          "default": null,
+          "nullable": false,
+          "data_type": "enum",
+          "max_length": 12,
+          "column_type": "enum('client','vendor','admin','hub_admin','moderator','hub_employee','deliveryman')",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "createdAt",
+          "position": 7,
+          "default": "current_timestamp(6)",
+          "nullable": false,
+          "data_type": "datetime",
+          "max_length": null,
+          "column_type": "datetime(6)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "dob",
+          "position": 8,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "datetime",
+          "max_length": null,
+          "column_type": "datetime",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "phoneNumber",
+          "position": 9,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "sex",
+          "position": 10,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "enum",
+          "max_length": 5,
+          "column_type": "enum('homme','femme')",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "isEmailVerified",
+          "position": 11,
+          "default": "0",
+          "nullable": false,
+          "data_type": "tinyint",
+          "max_length": null,
+          "column_type": "tinyint(4)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "imgUrl",
+          "position": 12,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "blocked",
+          "position": 13,
+          "default": "0",
+          "nullable": false,
+          "data_type": "tinyint",
+          "max_length": null,
+          "column_type": "tinyint(4)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "deviceToken",
+          "position": 14,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "permissions",
+          "position": 15,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "text",
+          "max_length": 65535,
+          "column_type": "text",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "fullName",
+          "position": 16,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "hub_id",
+          "position": 17,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "int",
+          "max_length": null,
+          "column_type": "int(11)",
+          "key": "MUL",
+          "extra": ""
+        },
+        {
+          "name": "firebaseUserId",
+          "position": 18,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "address",
+          "position": 19,
+          "default": "NULL",
+          "nullable": true,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        }
+      ],
+      "indexes": [
+        {
+          "name": "FK_30feaa74c229411bf8e9ba2085c",
+          "non_unique": true,
+          "columns": [
+            {
+              "name": "hub_id",
+              "seq": 1,
+              "collation": "A",
+              "cardinality": 9
+            }
+          ]
+        },
+        {
+          "name": "IDX_e12875dfb3b1d92d7d7c5377e2",
+          "non_unique": false,
+          "columns": [
+            {
+              "name": "email",
+              "seq": 1,
+              "collation": "A",
+              "cardinality": 27
+            }
+          ]
+        },
+        {
+          "name": "PRIMARY",
+          "non_unique": false,
+          "columns": [
+            {
+              "name": "id",
+              "seq": 1,
+              "collation": "A",
+              "cardinality": 27
+            }
+          ]
+        }
+      ],
+      "foreign_keys": [
+        {
+          "name": "FK_30feaa74c229411bf8e9ba2085c",
+          "columns": [
+            "hub_id"
+          ],
+          "referenced_table": "user",
+          "referenced_columns": [
+            "id"
+          ],
+          "update_rule": "NO ACTION",
+          "delete_rule": "NO ACTION"
+        }
+      ]
+    },
+    {
+      "name": "wilaya",
+      "type": "BASE TABLE",
+      "columns": [
+        {
+          "name": "code",
+          "position": 1,
+          "default": null,
+          "nullable": false,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "PRI",
+          "extra": ""
+        },
+        {
+          "name": "name",
+          "position": 2,
+          "default": null,
+          "nullable": false,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        },
+        {
+          "name": "ar_name",
+          "position": 3,
+          "default": null,
+          "nullable": false,
+          "data_type": "varchar",
+          "max_length": 255,
+          "column_type": "varchar(255)",
+          "key": "",
+          "extra": ""
+        }
+      ],
+      "indexes": [
+        {
+          "name": "PRIMARY",
+          "non_unique": false,
+          "columns": [
+            {
+              "name": "code",
+              "seq": 1,
+              "collation": "A",
+              "cardinality": 58
+            }
+          ]
+        }
+      ],
+      "foreign_keys": []
+    }
+  ]
+}

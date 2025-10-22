@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Roboto", sans-serif !important;
+  @apply bg-bg;
+}
+
+@theme {
+  --color-orange: hsla(21, 100%, 50%, 1);
+  --color-delivery-orange: hsla(21, 100%, 50%, 1);
+  --color-bg: hsla(240, 33%, 98%, 1);
+  --color-gray: hsla(0, 0%, 95%, 1);
+  --color-yellow: hsla(39, 100%, 72%, 1);
+  --sidebar-w: 13.5rem;
+}
+h1 {
+  @apply capitalize text-3xl font-bold text-gray-800;
+}
+h2 {
+  @apply text-2xl font-bold text-gray-800 mb-4;
+}
+
+.isActive {
+  @apply bg-orange text-white before:content-[''] before:block before:absolute before:left-0 before:h-full before:w-1 before:bg-orange-500 before:-translate-x-4 before:rounded-tr-lg before:rounded-br-lg before:-translate-y-3 rtl:before:right-0 rtl:before:translate-x-4 rtl:before:rotate-180;
+}
+.active_tab {
+  @apply text-orange transition-colors relative after:rounded-tl-2xl after:rounded-tr-2xl after:content-[''] after:w-full after:h-1.5 after:bg-orange after:absolute after:bottom-0 after:left-0;
+}
+
+button {
+  @apply cursor-pointer;
+}

@@ -1,0 +1,96 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  background: var(--coligoo-cream);
+}
+
+.card {
+  width: 100%;
+  max-width: 780px;
+  background: var(--white);
+  color: var(--coligoo-dark);
+  padding: 2.25rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(38, 50, 56, 0.06);
+  text-align: center;
+  border: 1px solid rgba(38, 50, 56, 0.04);
+}
+
+.imageWrapper {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.code {
+  font-size: 4.25rem;
+  font-weight: 800;
+  color: var(--coligoo-orange);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--coligoo-gray);
+  margin-bottom: 1.25rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  min-width: 140px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnOutline {
+  min-width: 140px;
+}
+
+.path {
+  margin-top: 1rem;
+  color: var(--coligoo-gray);
+  font-size: 0.92rem;
+}
+
+.pathLabel {
+  font-weight: 600;
+  margin-right: 0.35rem;
+  color: var(--coligoo-dark);
+}
+
+.pathCode {
+  background: rgba(0, 0, 0, 0.03);
+  padding: 0.2rem 0.45rem;
+  border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono",
+    monospace;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .btnPrimary,
+  .btnOutline {
+    width: 100%;
+  }
+}
